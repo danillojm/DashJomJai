@@ -2,14 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/constants/constants.dart';
 import 'package:responsive_admin_dashboard/constants/responsive.dart';
-import 'package:responsive_admin_dashboard/screens/components/analytic_cards.dart';
+ 
 import 'package:responsive_admin_dashboard/screens/components/custom_appbar.dart';
-import 'package:responsive_admin_dashboard/screens/components/top_referals.dart';
-import 'package:responsive_admin_dashboard/screens/components/users.dart';
-import 'package:responsive_admin_dashboard/screens/components/users_by_device.dart';
-import 'package:responsive_admin_dashboard/screens/components/viewers.dart';
-
-import 'discussions.dart';
 
 class DashboardContent extends StatelessWidget {
   const DashboardContent({Key? key}) : super(key: key);
@@ -34,16 +28,16 @@ class DashboardContent extends StatelessWidget {
                       flex: 5,
                       child: Column(
                         children: [
-                          AnalyticCards(),
+                          
                           SizedBox(
                             height: appPadding,
                           ),
-                          Users(),
+                         // Users(),
                           if (Responsive.isMobile(context))
                             SizedBox(
                               height: appPadding,
                             ),
-                          if (Responsive.isMobile(context)) Discussions(),
+                         // if (Responsive.isMobile(context)) Discussions(),
                         ],
                       ),
                     ),
@@ -51,11 +45,11 @@ class DashboardContent extends StatelessWidget {
                       SizedBox(
                         width: appPadding,
                       ),
-                    if (!Responsive.isMobile(context))
-                      Expanded(
-                        flex: 2,
-                        child: Discussions(),
-                      ),
+                    // if (!Responsive.isMobile(context))
+                    //   Expanded(
+                    //     flex: 2,
+                    //     child: Discussions(),
+                    //   ),
                   ],
                 ),
                 Row(
@@ -70,17 +64,17 @@ class DashboardContent extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              if(!Responsive.isMobile(context))
+                              /* if(!Responsive.isMobile(context))
                                 Expanded(
                                   child: TopReferals(),
                                   flex: 2,
-                                ),
-                              if(!Responsive.isMobile(context))
+                                ), */
+                          /*     if(!Responsive.isMobile(context))
                                 SizedBox(width: appPadding,),
                               Expanded(
                                 flex: 3,
                                 child: Viewers(),
-                              ),
+                              ), */
                             ],
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
@@ -91,16 +85,16 @@ class DashboardContent extends StatelessWidget {
                             SizedBox(
                               height: appPadding,
                             ),
-                          if (Responsive.isMobile(context)) TopReferals(),
+                     /*      if (Responsive.isMobile(context)) TopReferals(),
                           if (Responsive.isMobile(context))
                             SizedBox(
                               height: appPadding,
                             ),
-                          if (Responsive.isMobile(context)) UsersByDevice(),
+                          if (Responsive.isMobile(context)) UsersByDevice(), */
                         ],
                       ),
                     ),
-                    if (!Responsive.isMobile(context))
+                 /*    if (!Responsive.isMobile(context))
                       SizedBox(
                         width: appPadding,
                       ),
@@ -108,7 +102,7 @@ class DashboardContent extends StatelessWidget {
                       Expanded(
                         flex: 2,
                         child: UsersByDevice(),
-                      ),
+                      ), */
                   ],
                 ),
               ],

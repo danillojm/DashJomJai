@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/constants/constants.dart';
 import 'package:responsive_admin_dashboard/screens/components/drawer_list_tile.dart';
+import 'package:responsive_admin_dashboard/screens/productbudget/product_budget.dart';
 
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class DrawerMenu extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.all(appPadding),
-            child: Image.asset("assets/images/logowithtext.png"),
+            child: Image.asset("assets/images/logotiago.png"),
           ),
           DrawerListTile(
               title: 'Dash Board',
@@ -21,15 +22,20 @@ class DrawerMenu extends StatelessWidget {
                 print('You Click Dash Board');
               }),
           DrawerListTile(
-              title: 'Blog Post',
+              title: 'Relatorios',
               svgSrc: 'assets/icons/BlogPost.svg',
-              tap: () {}),
-          DrawerListTile(
+              tap: () {
+ Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProductBudget(),));
+
+              }),
+          /* DrawerListTile(
               title: 'Message', svgSrc: 'assets/icons/Message.svg', tap: () {}),
           DrawerListTile(
               title: 'Statistics',
               svgSrc: 'assets/icons/Statistics.svg',
-              tap: () {}),
+              tap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Discussions(),));
+              }), */
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: appPadding * 2),
             child: Divider(
@@ -41,8 +47,7 @@ class DrawerMenu extends StatelessWidget {
               title: 'Settings',
               svgSrc: 'assets/icons/Setting.svg',
               tap: () {}),
-          DrawerListTile(
-              title: 'Logout', svgSrc: 'assets/icons/Logout.svg', tap: () {}),
+         // DrawerListTile( title: 'Logout', svgSrc: 'assets/icons/Logout.svg', tap: () {}),
         ],
       ),
     );

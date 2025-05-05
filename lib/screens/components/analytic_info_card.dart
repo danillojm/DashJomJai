@@ -25,7 +25,7 @@ class AnalyticInfoCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "${info.count}",
+                "${info.title}",
                 style: TextStyle(
                   color: textColor,
                   fontSize: 18,
@@ -46,7 +46,7 @@ class AnalyticInfoCard extends StatelessWidget {
               )
             ],
           ),
-          Text(
+        /*   Text(
             info.title!,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
@@ -55,7 +55,7 @@ class AnalyticInfoCard extends StatelessWidget {
               fontSize: 15,
               fontWeight: FontWeight.w600,
             ),
-          )
+          ) */
         ],
       ),
     );
